@@ -21,7 +21,6 @@ local function removeESP(player)
     end
 end
 
--- Remove Feature Info (Health Bar, Name & Team info)
 local function removeFeatureInfo(player)
     if player.Character then
         if player.Character.Head:FindFirstChild("ESP") then
@@ -102,7 +101,6 @@ local function lineESP(player)
     lineFrame.BorderSizePixel = 0
     lineFrame.Size = UDim2.new(0, 0, 0, 0)
 
-    -- Update the line position and size
     local function updateLine()
         local camera = game.Workspace.CurrentCamera
         local cameraPosition = camera.CFrame.Position
