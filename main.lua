@@ -15,7 +15,6 @@ local function removeESP(player)
         if player.Character:FindFirstChild("ESPBox") then
             player.Character.ESPBox:Destroy()
         end
-        -- Remove Line ESP
         if player.Character:FindFirstChild("LineESP") then
             player.Character.LineESP:Destroy()
         end
