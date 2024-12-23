@@ -209,6 +209,19 @@ local Window = Rayfield:CreateWindow({
     Name = "LumosHUD",
     LoadingTitle = "LumosHUD Loading",
     LoadingSubtitle = "by LumosHUD",
+    Discord = {
+	    Enabled = true,
+        Invite = "sirius",
+        RememberJoins = true},
+    KeySystem = true,
+    	KeySettings = {
+		Title = "Sirius Hub",
+		Subtitle = "Key System",
+		Note = "Join the discord (discord.gg/sirius)",
+		FileName = "SiriusKey",
+		SaveKey = true,
+		GrabKeyFromSite = true,
+		Key = loadstring(game:HttpGet("https://raw.githubusercontent.com/ander-discord/LumosHUD/refs/heads/main/Key"))()
 })
 
 local ESPTab = Window:CreateTab("ESP", nil)
