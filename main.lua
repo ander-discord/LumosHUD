@@ -63,9 +63,7 @@ local function espBox(player)
     local espBoxFrame = Instance.new("Frame")
     espBoxFrame.Parent = espBoxGui
     espBoxFrame.Size = UDim2.new(1, 0, 1, 0)
-    espBoxFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
-    espBoxFrame.BorderSizePixel = 3
-    espBoxFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+    espBoxFrame.BackgroundColor3 = player.Team and player.Team.TeamColor.Color or Color3.fromRGB(125, 125, 125)
 
     local connection
     connection = character.HumanoidRootPart:GetPropertyChangedSignal("Size"):Connect(function()
