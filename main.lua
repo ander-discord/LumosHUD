@@ -210,7 +210,7 @@ local Window = Rayfield:CreateWindow({
         FileName = "SiriusKey",
         SaveKey = true,
         GrabKeyFromSite = true,
-        Key = "%m3iZng=^4fE8)TJpO#P#eJS=t[DQ4a#fUN#y*Mg*)0(jzRJ[ldbFU~4aV0trZY"
+        Key = "[v0vP0SuA:/K]]d'<+*Z3rpM~K1x&"
     }
 })
 
