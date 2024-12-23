@@ -199,18 +199,18 @@ local Window = Rayfield:CreateWindow({
     LoadingSubtitle = "by LumosHUD",
     Discord = {
         Enabled = true,
-        Invite = "sirius",
+        Invite = "gARMaGUbeX",
         RememberJoins = true
     },
     KeySystem = true,
     KeySettings = {
-        Title = "Sirius Hub",
+        Title = "LumosHUD key",
         Subtitle = "Key System",
         Note = "Join the discord (discord.gg/sirius)",
         FileName = "SiriusKey",
         SaveKey = true,
         GrabKeyFromSite = true,
-        Key = loadstring(game:HttpGet("https://raw.githubusercontent.com/ander-discord/LumosHUD/refs/heads/main/Key"))()
+        Key = "%m3iZng=^4fE8)TJpO#P#eJS=t[DQ4a#fUN#y*Mg*)0(jzRJ[ldbFU~4aV0trZY"
     }
 })
 
