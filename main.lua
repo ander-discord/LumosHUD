@@ -90,26 +90,23 @@ local function lineESP(player)
     linePart.Name = "LineESP"
     linePart.Anchored = true
     linePart.CanCollide = false
-    linePart.Size = Vector3.new(0.1, 0.1, (cameraPosition - characterPosition).Magnitude)
-    linePart.Position = (cameraPosition + characterPosition) / 2
+    linePart.Size = Vector3.new(0.1, 0.1, 0)
     linePart.Color = Color3.fromRGB(255, 0, 0)
     linePart.Parent = game.Workspace
 
-local function updateLine()
-    local camera = game.Workspace.CurrentCamera
-    local cameraPosition = camera.CFrame.Position
-    local characterPosition = humanoidRootPart.Position
+    local function updateLine()
+        local camera = game.Workspace.CurrentCamera
+        local cameraPosition = camera.CFrame.Position
+        local characterPosition = humanoidRootPart.Position
 
-    linePart.Size = Vector3.new(0.1, 0.1, (cameraPosition - characterPosition).Magnitude)
-    linePart.CFrame = CFrame.new(cameraPosition, characterPosition)
-end
-
+        linePart.Size = Vector3.new(0.1, 0.1, (cameraPosition - characterPosition).Magnitude)
+        linePart.CFrame = CFrame.new(cameraPosition, characterPosition) * CFrame.new(0, 0, -linePart.Size.Z / 2)
+    end
     game:GetService("RunService").RenderStepped:Connect(function()
         if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
             updateLine()
         end
     end)
-
     game:GetService("Players").PlayerRemoving:Connect(function()
         if linePart then linePart:Destroy() end
     end)
