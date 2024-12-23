@@ -86,29 +86,22 @@ local function lineESP(player)
     local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
     if not humanoidRootPart then return end
 
-    local lineGui = Instance.new("BillboardGui")
-    lineGui.Name = "LineESP"
-    lineGui.Parent = character
-    lineGui.Adornee = humanoidRootPart
-    lineGui.Size = UDim2.new(0, 0, 0, 0)
-    lineGui.AlwaysOnTop = true
-
-    local lineFrame = Instance.new("Frame")
-    lineFrame.Parent = lineGui
-    lineFrame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-    lineFrame.BorderSizePixel = 0
-    lineFrame.Size = UDim2.new(0, 0, 0, 0)
+    local linePart = Instance.new("Part")
+    linePart.Name = "LineESP"
+    linePart.Anchored = true
+    linePart.CanCollide = false
+    linePart.Size = Vector3.new(0.1, 0.1, (cameraPosition - characterPosition).Magnitude)
+    linePart.Position = (cameraPosition + characterPosition) / 2
+    linePart.Color = Color3.fromRGB(255, 0, 0)
+    linePart.Parent = game.Workspace
 
     local function updateLine()
         local camera = game.Workspace.CurrentCamera
         local cameraPosition = camera.CFrame.Position
         local characterPosition = humanoidRootPart.Position
 
-        local direction = (characterPosition - cameraPosition).unit
-        local distance = (cameraPosition - characterPosition).Magnitude
-
-        lineFrame.Size = UDim2.new(0, distance, 0, 2)
-        lineFrame.CFrame = CFrame.new(cameraPosition, characterPosition)
+        linePart.Size = Vector3.new(0.1, 0.1, (cameraPosition - characterPosition).Magnitude)
+        linePart.CFrame = CFrame.new(cameraPosition, characterPosition)
     end
 
     game:GetService("RunService").RenderStepped:Connect(function()
@@ -118,7 +111,7 @@ local function lineESP(player)
     end)
 
     game:GetService("Players").PlayerRemoving:Connect(function()
-        if lineGui then lineGui:Destroy() end
+        if linePart then linePart:Destroy() end
     end)
 end
 
