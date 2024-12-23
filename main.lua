@@ -209,8 +209,8 @@ local Window = Rayfield:CreateWindow({
         Note = "Join the discord (discord.gg/sirius)",
         FileName = "SiriusKey",
         SaveKey = true,
-        GrabKeyFromSite = true,
-        Key = "[v0vP0SuA:/K]]d'<+*Z3rpM~K1x&"
+        GrabKeyFromSite = false,
+        Key = "5F9B6299BB97C82B4AC3AA6BD1B31"
     }
 })
 
