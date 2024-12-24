@@ -210,7 +210,7 @@ local Window = Rayfield:CreateWindow({
         FileName = "Lumos",
         SaveKey = false,
         GrabKeyFromSite = true,
-        Key = loadstring()
+        Key = loadstring(game:HttpGet("https://raw.githubusercontent.com/ander-discord/LumosHUD/refs/heads/main/Key.txt"))()
     }
 })
 
