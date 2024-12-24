@@ -1,6 +1,6 @@
 print("Thanks, You using LumosHUD")
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
-local key = loadstring(game:HttpGet("https://raw.githubusercontent.com/ander-discord/LumosHUD/refs/heads/main/Key"))()
+local key = loadstring(game:HttpGet('https://raw.githubusercontent.com/ander-discord/LumosHUD/refs/heads/main/Key'))()
 
 local ESPEnabled = true
 local FeatureInfoEnabled = true
