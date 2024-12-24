@@ -194,7 +194,7 @@ local function info(player)
 end
 
 local Window = Rayfield:CreateWindow({
-    Name = "LumosHUD",
+    Name = "LumosHUD (Private Hack)",
     LoadingTitle = "LumosHUD Loading",
     LoadingSubtitle = "by LumosHUD",
     Discord = {
@@ -206,11 +206,11 @@ local Window = Rayfield:CreateWindow({
     KeySettings = {
         Title = "LumosHUD key",
         Subtitle = "Key System",
-        Note = "Join the discord (discord.gg/sirius)",
-        FileName = "SiriusKey",
-        SaveKey = true,
-        GrabKeyFromSite = false,
-        Key = "5F9B6299BB97C82B4AC3AA6BD1B31"
+        Note = "Join the discord (discord.gg/V2AuYTGZPb)",
+        FileName = "Lumos",
+        SaveKey = false,
+        GrabKeyFromSite = true,
+        Key = loadstring()
     }
 })
 
