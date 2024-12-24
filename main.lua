@@ -1,5 +1,6 @@
 print("Thanks, You using LumosHUD")
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
+local key = loadstring(game:HttpGet("https://raw.githubusercontent.com/ander-discord/LumosHUD/refs/heads/main/Key"))()
 
 local ESPEnabled = true
 local FeatureInfoEnabled = true
@@ -209,8 +210,8 @@ local Window = Rayfield:CreateWindow({
         Note = "Join the discord (discord.gg/V2AuYTGZPb)",
         FileName = "Lumos",
         SaveKey = false,
-        GrabKeyFromSite = false,
-        Key = 5F9B6299BB97C82B4AC3AA6BD1B31
+        GrabKeyFromSite = true,
+        Key = key
     }
 })
 
