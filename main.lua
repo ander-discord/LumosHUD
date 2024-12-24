@@ -209,8 +209,8 @@ local Window = Rayfield:CreateWindow({
         Note = "Join the discord (discord.gg/V2AuYTGZPb)",
         FileName = "Lumos",
         SaveKey = false,
-        GrabKeyFromSite = true,
-        Key = loadstring(game:HttpGet("https://raw.githubusercontent.com/ander-discord/LumosHUD/refs/heads/main/Key.txt"))()
+        GrabKeyFromSite = false,
+        Key = "5F9B6299BB97C82B4AC3AA6BD1B31"
     }
 })
 
