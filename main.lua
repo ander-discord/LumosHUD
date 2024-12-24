@@ -210,7 +210,7 @@ local Window = Rayfield:CreateWindow({
         FileName = "Lumos",
         SaveKey = false,
         GrabKeyFromSite = false,
-        Key = "5F9B6299BB97C82B4AC3AA6BD1B31"
+        Key = 5F9B6299BB97C82B4AC3AA6BD1B31
     }
 })
 
